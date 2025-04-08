@@ -1,0 +1,33 @@
+body {
+  background: #fcfcfc;
+  font-family: Inter;
+}
+.form-container label {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+.form-container .form-control {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  height: 42px;
+}
+.form-container .form-control-textaria {
+  height: 67px;
+}
+.form-container .form-select {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  height: 42px;
+}
+.job-title {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-top: 37px;
+  margin-bottom: 20px;
+}

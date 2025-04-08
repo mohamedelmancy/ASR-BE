@@ -1,0 +1,136 @@
+.container-fluid {
+
+}
+
+.input-select {
+    border-radius: 12px;
+    border: 1px solid #D1D5DB;
+    background: #FFF;
+    display: flex;
+    width: 247px;
+    height: 50px;
+    padding: 13px 18px 13px 19px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 89px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+.store-card {
+    border-radius: 12px;
+    border: 0px solid #E5E7EB;
+    background: #FFF;
+    padding: 24px 16px 24px 24px;
+}
+
+.cards {
+    gap: 24px;
+    margin-top: 35px;
+    display: flex;
+}
+
+.card_head {
+    margin-bottom: 19px;
+}
+
+.card-edit {
+    cursor: pointer;
+}
+
+.card-icon {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    padding: 10.5px 12px 9.5px 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 0px solid #E5E7EB;
+}
+
+.settings {
+    background: #DBEAFE;
+}
+
+.units {
+    background: #EDE9FE;
+}
+
+.colors {
+    background: #CCFBF1;
+}
+
+.brands {
+    background: #FCE7F3;
+}
+
+.items {
+    background: #FEF3C7;
+}
+
+.groups {
+    background: #FFEDD5;
+}
+
+.limits {
+    background: #FEE2E2;
+}
+
+.barcodes {
+    background: #E0E7FF;
+}
+
+.stores {
+    background: #D1FAE5;
+}
+
+.barcodes {
+    background: #E0E7FF;
+}
+
+.card-title {
+    margin-bottom: 14px;
+    color: #1F2937;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.card-description {
+    margin-bottom: 20px;
+    color: #4B5563;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.card-navigation {
+    border-radius: 12px;
+    border: 0px solid #E5E7EB;
+    background: #FFF;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.navigation-text {
+    color: #2563EB;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.all_items {
+    display: flex;
+    gap: 29px;
+    flex-direction: column;
+}

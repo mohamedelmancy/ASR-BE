@@ -1,0 +1,234 @@
+.container-fluid {
+    padding: 40px 40px 40px 43px;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.page-title img {
+    width: 32px;
+    height: 32px;
+}
+
+.fields {
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 25px 12px; /* First value = vertical gap, second value = horizontal gap */
+    margin-bottom: 37px;
+}
+
+.job_information {
+    gap: 19px;
+}
+
+.job_information .section-title {
+    gap: 16px;
+}
+
+.section-title img {
+    width: 16px;
+    height: 16px;
+}
+
+.section-title .text {
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 100% */
+}
+
+.actions {
+    gap: 20px;
+    align-items: end;
+    justify-content: end;
+}
+
+.preview {
+    display: flex;
+    width: 94px;
+    height: 42px;
+    padding: 11px 17px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    background: rgba(0, 0, 0, 0.00);
+    color: #374151;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.save {
+    display: flex;
+    width: 94px;
+    height: 42px;
+    padding: 11px 17px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 0px solid #E5E7EB;
+    background: #1B3664;
+    color: #ffffff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.searchable-select {
+    position: relative;
+    width: 100%;
+}
+
+.searchable-select input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.searchable-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+    z-index: 99;
+}
+
+.searchable-options div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.searchable-options div:hover {
+    background: #f0f0f0;
+}
+
+.hidden-select {
+    display: none;
+}
+
+
+/*////////// multiple select dropdown */
+
+.multi-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.multi-select-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background: white;
+}
+
+.multi-select-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    z-index: 99;
+}
+
+.multi-select-dropdown label {
+    padding: 6px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.multi-select-dropdown label:hover {
+    background-color: #f1f1f1;
+}
+
+.hidden-select {
+    display: none;
+}
+
+.multi-select-search {
+    width: 100%;
+    padding: 6px 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/*////////// radio select dropdown */
+
+.radio-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.radio-select-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+}
+
+.radio-select-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    z-index: 99;
+}
+
+.radio-select-dropdown label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.radio-select-dropdown label:hover {
+    background-color: #f1f1f1;
+}
+
+.hidden-select {
+    display: none;
+}
+
+.radio-select-search {
+    width: 100%;
+    padding: 6px 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+}

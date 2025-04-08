@@ -1,0 +1,48 @@
+p {
+    margin-bottom: 0;
+}
+
+.tranfer-request-layout {
+    padding-left: 42px;
+    padding-right: 42px;
+    font-family: Inter;
+}
+.transfer-request-header{
+    color: #1B3664;
+    margin-bottom: 42px;
+    
+}
+.info-card {
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+}
+
+.info-card-head {
+    color: #6B7280;
+}
+
+.info-card-amount {
+    color: #1F2937;
+}
+
+.info-card-icon-container {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #FFEDD5;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 998px) {
+    .tranfer-request-layout {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .transfer-request-header{
+        margin-bottom: 20px;
+    }
+}

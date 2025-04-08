@@ -1,0 +1,19 @@
+.input-select {
+    border-radius: 12px;
+    border: 1px solid #D1D5DB;
+    background: #FFF;
+    display: flex;
+    width: 247px;
+    height: 50px;
+    padding: 13px 18px 13px 19px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 89px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}

@@ -1,0 +1,77 @@
+p,
+h2,
+h3 {
+    margin-bottom: 0;
+}
+
+.all-inventory-header {
+    color: #1B3664;
+    margin-bottom: 42px;
+}
+
+.all-inventory {
+    padding-left: 42px;
+    padding-right: 42px;
+    font-family: Inter;
+}
+
+.all-inventory-report-card {
+    background-color: #fff;
+    padding-inline-start: 32px;
+    padding-inline-end: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.chart-header {
+    margin-top: 10px;
+    color: #5C7CB2;
+    margin-bottom: 23px;
+}
+.inventory-report-card{
+    height: 107px;
+    background-color: #F0F0F7;
+    border-radius: 12px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 19px;
+}
+.mt-14{
+    margin-top: 14px;
+}
+.inventory-report-card-header{
+    color: #1B3664;
+} 
+.inventory-report-card-amount{
+    color: #5C7CB2;
+} 
+.inventory-chart-container{
+    height: 300px;
+}
+canvas {
+    display: block !important;
+}
+.custom-gap {
+    --bs-gutter-x: 40px; /* Bootstrap variable for column gap */
+}
+@media only screen and (max-width: 998px) {
+    .all-inventory {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: Inter;
+    }
+    .inventory-cards-container{
+        margin-top: 20px;
+    }
+    .all-inventory-report-card {
+        padding-inline-start: 20px;
+        padding-inline-end: 20px;
+       
+    }
+    .custom-gap {
+        --bs-gutter-x: 0; /* Bootstrap variable for column gap */
+    }
+    .all-inventory-header {
+        margin-bottom: 20px;
+    }
+}

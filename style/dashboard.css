@@ -1,0 +1,259 @@
+.main {
+    padding-left: 13px;
+    padding-right: 50px;
+}
+
+.state__card {
+    padding: 24px 12px;
+    border-radius: 12px;
+    background-color: #fff;
+    height: 400px;
+}
+
+.state__card__h {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.state__card__header {
+    margin-bottom: 30px;
+}
+
+body {
+    background: #fcfcfc;
+    font-family: Inter;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.progress-color-blue {
+    background: #89cff0;
+}
+
+.progress-color-green {
+    background: #22c55e;
+}
+
+.progress-color-orange {
+    background: #ffc125;
+}
+
+.progress-color-red {
+    background: #f97316;
+}
+
+.progress-custom {
+    height: 8px;
+}
+
+.state__card__info .info-name {
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.state__card__info .info-persentage {
+    color: #1f2937;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+}
+
+.state-card-totals-head {
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+
+}
+
+.state-card-totals {
+    margin-top: 38px;
+}
+
+.state-card-totals-number {
+    color: #1f2937;
+    border-top: 1px solid #e5e7eb;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.state-card-totals-percentage {
+    color: #16a34a;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+}
+
+.card-custom {
+    height: 214px;
+    padding: 24px;
+    border-radius: 12px;
+    border: 0px solid #e5e7eb;
+    background: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.card-custom h6 {
+    color: #1f2937;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.card-custom .card-subtitle .title {
+    color: #4b5563;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 0;
+}
+
+.card-custom .card-subtitle .amount {
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.card-custom .custom-card-info {
+    color: #22c55e;
+
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.custom-bar-chart-container {
+    border-radius: 12px;
+    background: #fff;
+    padding: 35px 16px 24px 16px;
+}
+
+.custom-bar-chart-container h3 {
+    font-size: 18px;
+    color: #1c1c1c;
+    font-weight: 500;
+    font-family: "Inter";
+    margin-bottom: 22px;
+}
+
+.legend-indicator {
+    width: 4px;
+    height: 35px;
+    border-radius: 2px;
+}
+
+.legend-label .title {
+    color: #676767;
+    font-family: "Inter";
+    font-size: 12px;
+
+    font-weight: 400;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.legend-label .percentage {
+    font-family: "Inter";
+    font-size: 12px;
+
+    font-weight: 500;
+    line-height: normal;
+}
+
+.pie-chart-container {
+    margin-bottom: 38px;
+    width: 173px;
+    height: 173px;
+    text-align: center;
+    margin-left: 27px;
+    margin-right: 27px;
+}
+
+.pie-chart-header {
+    color: #1c1c1c;
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.legend-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card_title__ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.employee_nums {
+    border-radius: 9999px;
+    border: 2px solid #FFF;
+    background: #E5E7EB;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    padding: 8px 5.938px 8px 5.922px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #4B5563;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.employee_images img {
+    border-radius: 9999px;
+    border: 2px solid #FFF;
+    background: #E5E7EB;
+    width: 32px;
+    height: 32px;
+}
+
+.card-body_ {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.emp_img {
+    margin-inline-start: -7px;
+}
+
+.revenues_and_expenses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #F4F4F4;
+    width: 114px;
+    height: 34px;
+    border: none;
+    color: #A6A6A6;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

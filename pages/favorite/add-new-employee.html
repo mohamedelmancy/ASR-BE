@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASR-ERP</title>
+    <link href="../../style/main.css" rel="stylesheet">
+    <link id="rtlStylesheet" href="../../style/main-rtl.css" rel="stylesheet" disabled>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"></script>
+    <script src="../../assets/js/change-language.js" defer></script> <!-- Include JS file -->
+    <script src="../../assets/js/load-pages.js" defer></script> <!-- Load html pages inside index.html -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> <!-- Plugin -->
+    <link href="../../style/layout/layout.css" rel="stylesheet">
+
+     
+</head>
+<body style="background: #FCFCFC;">
+    <div id="content" dir="ltr">
+
+
+        <!-- Sidebar -->
+        <div class="d-flex main__layout">
+            <nav id="sidebar" class="sidebar collapse show">
+                <div class="sidebar-header text-center">
+                    <img src="../../assets/images/h-logo.png" alt="kse-logo" class="kse-logo">
+                </div>
+                <ul class="list-unstyled nav-items">
+                    <li>
+                        <a href="../dashboard.html" class="text-white nav-link d-flex" id="dashboard">
+                            <div class="icon__container">
+                                <object type="image/svg+xml" data="../../assets/images/dashboard-icon.svg"></object>
+                            </div>
+                            <label>Main dashboard</label>
+                        </a>
+                    </li>
+                    <!-- New Dropdown -->
+                    <li>
+                        <a href="#favoriteSubmenu" class="text-white nav-link d-flex dropdown-toggle" data-bs-toggle="collapse">
+                            <div class="icon__container">
+                                <object type="image/svg+xml" data="../../assets/images/clarity_favorite-line.svg"></object>
+                            </div>
+                            <label>Favorite</label>
+                        </a>
+                        <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="favoriteSubmenu">
+                            <li>
+                                <a class="nested-nav-link" href="./employee.html">
+                                    <input type="radio" id="fav1" name="favoriteGroup" class="radio-option">
+                                    <label for="fav1" class="">Employee</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nested-nav-link" href="./add-new-employee.html">
+                                    <input type="radio" id="addemp1" name="favoriteGroup" class="radio-option">
+                                    <label for="addemp1" class="">Add Employee</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nested-nav-link" data-url="/pages/favorite/taking-receipt.html">
+                                    <input type="radio" id="fav2" name="favoriteGroup" class="radio-option">
+                                    <label for="fav2" class="">Taking Receipt</label>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- New Dropdown -->
+                    <li>
+                        <a href="#SystemSubmenu" class="text-white nav-link d-flex dropdown-toggle" data-bs-toggle="collapse">
+                            <div class="icon__container">
+                                <object type="image/svg+xml" data="../../assets/images/system.svg"></object>
+                            </div>
+                            <label>System</label>
+                        </a>
+                        <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="SystemSubmenu">
+                            <li>
+                                <a class="nested-nav-link" data-url="/pages/system/store/system-store.html">
+                                    <input type="radio" id="store" name="systemGroup" class="radio-option">
+                                    <label for="store" class="">Store</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                    <input type="radio" id="Purchase" name="systemGroup" class="radio-option">
+                                    <label for="Purchase" class="">Purchase</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                    <input type="radio" id="Sale" name="systemGroup" class="radio-option">
+                                    <label for="Sale" class="">Sale</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                    <input type="radio" id="General Ledger" name="systemGroup" class="radio-option">
+                                    <label for="General Ledger" class="">General Ledger</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                    <input type="radio" id="Employee" name="systemGroup" class="radio-option">
+                                    <label for="Employee" class="">Employee</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                    <input type="radio" id="Security" name="systemGroup" class="radio-option">
+                                    <label for="Security" class="">Security</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                    <input type="radio" id="Definitions" name="systemGroup" class="radio-option">
+                                    <label for="Definitions" class="">Definitions</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                    <input type="radio" id="Attachment" name="systemGroup" class="radio-option">
+                                    <label for="Attachment" class="">Attachment</label>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- New Dropdown -->
+                    <li>
+                        <a href="#ReportsSubmenu" class="text-white nav-link d-flex dropdown-toggle" data-bs-toggle="collapse">
+                            <div class="icon__container">
+                                <object type="image/svg+xml" data="../../assets/images/reports.svg"></object>
+                            </div>
+                            <label>Reports</label>
+                        </a>
+                        <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="ReportsSubmenu">
+                            <li>
+                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                    <input type="radio" id="Store Report" name="reportsGroup" class="radio-option">
+                                    <label for="Store Report" class="">Store Report</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                    <input type="radio" id="Purchase Report" name="reportsGroup" class="radio-option">
+                                    <label for="Purchase Report" class="">Purchase Report</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                    <input type="radio" id="Save Report" name="reportsGroup" class="radio-option">
+                                    <label for="Save Report" class="">Save Report</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                    <input type="radio" id="General Lager Report" name="reportsGroup" class="radio-option">
+                                    <label for="General Lager Report" class="">General Lager Report</label>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="/pages/login.html" class="text-white nav-link logout d-flex">
+                            <div class="icon__container">
+                                <object type="image/svg+xml" data="../../assets/images/logout.svg"></object>
+                            </div>
+                            <label>Logout</label>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="nav_divider w-100">
+                    <div></div>
+                </div>
+
+                <div class="langs">
+                    <div class="inner">
+                        <div class="lang" id="en">English</div>
+                        <div class="lang" id="ar">العربيه</div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="d-flex flex-column main-container col-md">
+                <div class="content__header">
+                    <div class="col-sm-3">
+                        <img src="../../assets/images/hamburgermenu.svg" alt="kse" class="toggleSidebar" id="toggleSidebar">
+                    </div>
+                    <div class="search">
+                        <img src="../../assets/images/Search.svg">
+                        <input type="text">
+                        <img src="../../assets/images/Filter.svg">
+                    </div>
+                    <div class="user_menu d-flex align-items-center">
+
+                        <div class="d-flex align-items-start justify-content-center flex-column">
+                            <div class="name">Beter Wageeh</div>
+                            <div class="position">ADMIN</div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center dropdown__toggle"
+                             data-bs-toggle="dropdown">
+                            <img src="../../assets/images/placeholder.png" alt="asr">
+                            <img src="../../assets/images/iconamoon_arrow-down-2-fill.svg" alt="asr">
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" class="user_menu_dp_item">
+                                    <img src="../../assets/images/iconamoon_edit-thin.svg">
+                                    <span>Edit Profile</span>
+                                </a>
+                            </li>
+                            <div class="user_menu_divider"></div>
+                            <li>
+                                <a href="#" class="user_menu_dp_item">
+                                    <img src="../../assets/images/circum_logout.svg">
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="layout_content d-flex flex-column">
+                    <div class="content" id="inner_content">
+
+
+                         <link href="../../style/favorite/add-new-employee.css" rel="stylesheet">
+
+                        <div class="container-fluid">
+                            <form class="row" #form>
+                                <div class="page_title_custom d-flex p-0">
+                                    <img src="../../assets/images/ep_back.svg">
+                                    New Employee Information
+                                </div>
+
+                                <div class="col-sm-12 fields align-items-center flex-wrap p-0 d-flex row flex-column">
+                                    <div class="col-sm-12 col-md row">
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Employee Code</label>
+                                            <input type="text" name="code">
+                                        </div>
+
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Full Name</label>
+                                            <input type="text" name="full_name">
+                                        </div>
+
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Email</label>
+                                            <input type="text" name="email">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12 col-md row">
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Phone</label>
+                                            <div class="phone-input">
+                                                <select id="country-code" name="phone">
+                                                    <option value="+1" data-flag="🇺🇸">🇺🇸 +1 (US)</option>
+                                                    <option value="+20" data-flag="🇪🇬" selected disabled>🇪🇬 +20 (EG)</option>
+                                                    <option value="+44" data-flag="🇬🇧">🇬🇧 +44 (UK)</option>
+                                                    <option value="+91" data-flag="🇮🇳">🇮🇳 +91 (IN)</option>
+                                                </select>
+                                                <input type="tel" id="phone-number" placeholder="Enter Number">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Postal Number </label>
+                                            <input type="text" name="postal">
+                                        </div>
+
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Date of Birth </label>
+                                            <input type="date" name="dob" class="input-date" placeholder="mm/dd/yyyy">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12 col-md row">
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Gender</label>
+                                            <select id="gender" class="input-select" name="gender">
+                                                <option value="" disabled selected>Select gender</option>
+                                                <option value="1" selected disabled>Male</option>
+                                                <option value="2">Female</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Military Service</label>
+                                            <select id="Military Service" class="input-select" name="military">
+                                                <option value="0" selected disabled>Select Status</option>
+                                                <option value="1">Exempted</option>
+                                                <option value="2">Completed</option>
+                                                <option value="2">Postponed</option>
+                                                <option value="2">Ongoing</option>
+                                                <option value="2">Not Applicable</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12 col-md row">
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Gender</label>
+                                            <select class="input-select" name="gender">
+                                                <option value="" disabled selected>Select gender</option>
+                                                <option value="1">Male</option>
+                                                <option value="2">Female</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Select Hobbies</label>
+                                            <select class="multi-select" name="hobbies" multiple>
+                                                <option value="" disabled selected>Select hobbies</option>
+                                                <option value="reading">Reading</option>
+                                                <option value="music">Music</option>
+                                                <option value="sports">Sports</option>
+                                                <option value="traveling">Traveling</option>
+                                                <option value="cooking">Cooking</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-sm-12 col-md row">
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Select Country</label>
+                                            <select class="radio-select" name="country">
+                                                <option disabled selected>Select country</option>
+                                                <option value="egypt">Egypt</option>
+                                                <option value="usa">USA</option>
+                                                <option value="germany">Germany</option>
+                                                <option value="canada">Canada</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md row">
+                                        <div class="input-field col-sm-12">
+                                            <label class="label">Address </label>
+                                            <textarea class="input-text-area" name="address"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 job_information row flex-column align-items-center flex-wrap p-0 d-flex">
+                                    <div class="section-title d-flex col-sm-12 align-items-center">
+                                        <img src="../../assets/images/bag.svg">
+                                        <span class="text">Job Information</span>
+                                    </div>
+
+                                    <div class="col-sm-12 d-flex row">
+                                        <div class="multi-select input-field col-sm-12 col-md">
+                                            <label class="label">Job History</label>
+                                            <div class="selected-items input-multi-select" onclick="toggleDropdown()">
+                                                <img src="../../assets/images/arrow_down_radius.svg" class="arrow_down_radius">
+                                            </div>
+                                            <div class="dropdown_history">
+                                                <label><input type="checkbox" value="Developer"> <span>Developer</span></label>
+                                                <label><input type="checkbox" value="Designer"> <span>Designer</span></label>
+                                                <label><input type="checkbox" value="Manager"> <span>Manager</span></label>
+                                                <label><input type="checkbox" value="HR"> <span>HR</span></label>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Current Position</label>
+                                            <select id="Current Position" class="input-select" name="current_pos">
+                                                <option value="0" selected disabled>Select Status</option>
+                                                <option value="1">Exempted</option>
+                                                <option value="2">Completed</option>
+                                                <option value="2">Postponed</option>
+                                                <option value="2">Ongoing</option>
+                                                <option value="2">Not Applicable</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Current Position </label>
+                                            <input type="date" class="input-date" placeholder="mm/dd/yyyy" name="current_pos_date">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 d-flex row">
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Weekly Attendance Days</label>
+                                            <input type="text" name="attendance_days">
+                                        </div>
+
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Number of Attendance Hours</label>
+                                            <input type="text" name="attendance_hourse">
+                                        </div>
+
+                                        <div class="col-sm-12 col-md d-flex gap-1">
+                                            <div class="input-field col-sm-6">
+                                                <label class="label">Today's Value</label>
+                                                <input type="text" name="today">
+                                            </div>
+                                            <div class="input-field col-sm-6">
+                                                <label class="label">Value of the Hour</label>
+                                                <input type="text" name="hourse">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12 col-md row">
+                                        <div class="input-field col-sm-12 col-md">
+                                            <label class="label">Notes</label>
+                                            <input type="text" name="note">
+                                        </div>
+                                        <div class="d-flex col-sm-12 col-md actions">
+                                            <button class="preview">Preview</button>
+                                            <button class="save" type="submit" onclick="submit(form, $event)">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+                    </div>
+                    <div id="footer" class="footer"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script src="../../assets/js/layout/layout.js"></script>
+
+        <script src="../../assets/js/favorite/add-new-employee.js"></script>
+
+
+
+        <script>
+
+            function submit(form, event) {
+                event.preventDefault();
+                console.log('form', form)
+            }
+
+            function toggleDropdown() {
+                document.querySelector(".dropdown").style.display =
+                    document.querySelector(".dropdown").style.display === "block" ? "none" : "block";
+            }
+
+            document.querySelectorAll(".dropdown input").forEach(input => {
+                input.addEventListener("change", function () {
+                    let selectedDiv = document.querySelector(".selected-items");
+                    let existingTags = document.querySelectorAll(".tag");
+
+                    if (this.checked) {
+                        let tag = document.createElement("div");
+                        tag.className = "tag";
+                        tag.innerHTML = `${this.value} <img src="../../assets/images/iconoir_cancel.svg" onclick="removeTag(this, '${this.value}')"></img>`;
+                        selectedDiv.appendChild(tag);
+                    } else {
+                        existingTags.forEach(tag => {
+                            if (tag.textContent.includes(this.value)) {
+                                tag.remove();
+                            }
+                        });
+                    }
+                });
+            });
+
+            function removeTag(element, value) {
+                element.parentElement.remove();
+                document.querySelectorAll(".dropdown input").forEach(input => {
+                    if (input.value === value) {
+                        input.checked = false;
+                    }
+                });
+            }
+
+            document.addEventListener("click", function (e) {
+                if (!document.querySelector(".multi-select").contains(e.target)) {
+                    document.querySelector(".dropdown").style.display = "none";
+                }
+            });
+        </script>
+
+
+    </div>
+</body>
+</html>

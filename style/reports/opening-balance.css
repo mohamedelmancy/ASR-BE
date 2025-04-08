@@ -1,0 +1,78 @@
+p,
+h2 {
+    margin-bottom: 0;
+}
+
+.open-balance-container {
+    font-family: Inter;
+    padding-right: 42px;
+    padding-left: 42px;
+}
+
+.open-balance-header {
+    color: #1b3664;
+    margin-bottom: 41px;
+}
+
+.input-field {
+    gap: 10px;
+}
+
+.table-container {
+    background: #fff;
+    padding: 24px 24px 24px 24px;
+}
+
+.table-container .table-header {
+    color: #1F2937;
+}
+
+.table-container .view-all {
+    color: #1B3664;
+    cursor: pointer;
+}
+
+.account-summary {
+    padding: 27px 34px 24px 24px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.account-summary .account-summary-header {
+    color: #1F2937;
+    border-bottom: 28px;
+}
+
+.account-summary .account-summary-card {
+    padding: 16px;
+    border-radius: 8px;
+    background: #F9FAFB;
+    height: 68px;
+}
+
+.account-summary-card-p1 {
+    color: #1F2937;
+}
+
+.account-summary-card-p2 {
+    color: #6B7280;
+}
+
+.account-summary-card-amount {
+    color: #1F2937;
+}
+
+.table-row-container {
+    margin-top: 61px;
+}
+
+@media only screen and (max-width: 998px) {
+    .open-balance-container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .table-row-container {
+        margin-top: 20px;
+    }
+}

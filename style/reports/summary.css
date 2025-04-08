@@ -1,0 +1,152 @@
+h2,
+p {
+  margin-bottom: 0;
+}
+.summary-layout {
+  padding-left: 42px;
+  padding-right: 42px;
+}
+.summary-page-title {
+  color: #1b3664;
+  font-family: Inter;
+  font-weight: 700;
+}
+.percentage-card {
+  border-radius: 12px;
+  border: 0px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
+.percentage-card .percentage {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+}
+.percentage-card .percentage.green {
+  color: #10b981;
+}
+.percentage-card .percentage.red {
+  color: #ef4444;
+}
+.summary-percentage-container {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Creates 10 equal columns */
+  gap: 8px;
+}
+.percentage-card .image-container {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  border-radius: 8px;
+}
+.percentage-card .amount {
+  color: #1f2937;
+  font-family: Inter;
+  font-weight: 700;
+  margin-top: 18px;
+  line-height: normal;
+}
+.percentage-card .title {
+  color: #6b7280;
+  margin-top: 8px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+}
+.mt-36 {
+  margin-top: 36px;
+}
+.category-card {
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
+.category-card .category-card-title {
+  color: #1f2937;
+  font-family: Inter;
+  font-weight: 600;
+}
+.category-card .category-card-padge {
+  border-radius: 9999px;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 28px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-weight: 400;
+}
+.category-card .category-img-container {
+  border-radius: 8px;
+  background: #eff6ff;
+  width: 59px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.category-card .category-card-info .info-amount {
+  color: #1f2937;
+  font-family: Inter;
+  font-weight: 700;
+}
+.category-card .category-card-info .info-title {
+  color: #6b7280;
+  font-family: Inter;
+
+  font-weight: 400;
+}
+.activity-card {
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
+.activity-card .activity-card-title {
+  color: #1f2937;
+  font-family: Inter;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+.activity-card .time {
+  color: #9ca3af;
+  font-family: Inter;
+  font-weight: 400;
+}
+.activity-card .activity-card-info {
+  color: #4b5563;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+}
+.activity-container {
+  margin-top: 32px;
+}
+@media only screen and (max-width: 998px) {
+  .summary-percentage-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .summary-layout {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .mt-36 {
+    margin-top: 20px;
+  }
+  .summary-percentage-container {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 554px) {
+  .summary-percentage-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

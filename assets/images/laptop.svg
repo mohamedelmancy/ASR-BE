@@ -1,0 +1,6 @@
+<svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame">
+<path d="M0 0H20V16H0V0Z" stroke="#E5E7EB"/>
+<path id="Vector" d="M4 1C2.89687 1 2 1.89688 2 3V11H4V3H16V11H18V3C18 1.89688 17.1031 1 16 1H4ZM0.6 12C0.26875 12 0 12.2688 0 12.6C0 13.925 1.075 15 2.4 15H17.6C18.925 15 20 13.925 20 12.6C20 12.2688 19.7312 12 19.4 12H0.6Z" fill="black"/>
+</g>
+</svg>

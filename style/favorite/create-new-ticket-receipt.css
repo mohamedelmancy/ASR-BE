@@ -1,0 +1,133 @@
+.container-fluid {
+    padding: 40px 40px 40px 43px;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.page-title img {
+    width: 32px;
+    height: 32px;
+}
+
+.fields {
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 25px 12px; /* First value = vertical gap, second value = horizontal gap */
+    margin-bottom: 37px;
+}
+
+.job_information {
+    gap: 19px;
+}
+
+.job_information .section-title {
+    gap: 16px;
+}
+
+.section-title img {
+    width: 16px;
+    height: 16px;
+}
+
+.section-title .text {
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 100% */
+}
+
+.actions {
+    gap: 20px;
+    align-items: end;
+    justify-content: end;
+}
+
+.preview {
+    display: flex;
+    width: 94px;
+    height: 42px;
+    padding: 11px 17px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    background: rgba(0, 0, 0, 0.00);
+    color: #374151;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.save {
+    display: flex;
+    width: 94px;
+    height: 42px;
+    padding: 11px 17px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 0px solid #E5E7EB;
+    background: #1B3664;
+    color: #ffffff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+
+
+option:disabled {
+    overflow: hidden;
+    color: #A6A6A6;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Inter;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.input-field .input-icon_custom {
+    position: absolute !important;
+    right: 22px !important;
+    top: 65% !important;
+    width: 12px !important;
+    height: 12px !important;
+}
+
+.details {
+    margin-top: 24px;
+    margin-bottom: 18px;
+}
+
+.details .fields {
+    gap: 22px 24px;
+}
+
+.section-title {
+    color: #1F2937;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 36px;
+}
+
+table {
+    margin-bottom: 30px;
+}
+
+.page_title {
+    margin-bottom: 0 !important;
+}

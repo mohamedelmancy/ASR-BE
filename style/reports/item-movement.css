@@ -1,0 +1,120 @@
+h3,
+h2,
+p,
+ul {
+    margin-bottom: 0;
+}
+*{
+    line-height: normal;
+}
+
+.item-movement-layout {
+    font-family: Inter;
+    padding-left: 42px;
+    padding-right: 42px;
+}
+
+.item-movement-header {
+    color: #1B3664;
+    margin-bottom: 35px;
+}
+
+.movement-total-report {
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 12px 23px 0px rgba(62, 73, 84, 0.04);
+    padding-right: 22px;
+    padding-left: 22px;
+    padding-top: 22px;
+    height: 388px;
+}
+
+.movement-total-report .movement-nav {
+    list-style: none;
+    display: flex;
+}
+
+.movement-total-report .movement-nav li {
+    display: flex;
+    border-radius: 12px;
+    border: 1px solid #F2F2F2;
+    width: 80px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    color: #1B3664;
+}
+
+.margin-end-6 {
+    margin-inline-end: 6px;
+}
+
+.movement-total-report .movement-nav li.active {
+    background-color: #F4F5F9;
+}
+
+.movement-p {
+    color: #616161;
+    margin-bottom: 9px;
+}
+
+.movement-amount {
+    color: #1B3664;
+    margin-bottom: 17px;
+}
+
+.movement-total-report-pie {
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 12px 23px 0px rgba(62, 73, 84, 0.04);
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 35px;
+    height: 388px;
+}
+
+.item-report-header {
+    margin-bottom: 30px;
+    color: #3E4954;
+}
+
+.progress-bar-header {
+    margin-bottom: 14px;
+    color: #3E4954;
+
+}
+
+.progress-bar-amount {
+    color: #969BA0;
+}
+
+.progress-custom {
+    height: 9px;
+    background-color: #F3F3F3;
+}
+
+.pie-chart-info-item {
+    margin-bottom: 22px;
+}
+
+.chart-pie-container {
+    width: 208px;
+    height: 200px;
+}
+
+.radial-chart-container {
+    width: 220px;
+    height: 220px;
+}
+
+.multi-doughnut-info .multi-doughnut-item {
+    display: flex;
+    margin-bottom: 22px;
+}
+.multi-doughnut-item .box{
+height: 35px;
+width: 35px;
+background-color: #DC2626;
+border-radius: 12px;
+
+}

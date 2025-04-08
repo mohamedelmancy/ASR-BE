@@ -1,0 +1,154 @@
+p,
+h2,
+h3,
+ul {
+    margin-bottom: 0;
+}
+
+.total-order {
+    padding-right: 42px;
+    padding-left: 42px;
+    font-family: Inter;
+}
+
+.total-order-header {
+    color: #1B3664;
+    margin-bottom: 42px;
+}
+
+.order-summary {
+    border-radius: 12px;
+    background-color: #fff;
+    padding-top: 16px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 16px;
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.04);
+    height: 451px;
+}
+
+.order-summary-header {
+    margin-bottom: 16px;
+    color: #1A181B;
+}
+
+.order-summary-progress {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.progress-custom {
+    height: 8px;
+}
+
+.progress-header {
+    color: #756D78;
+}
+
+.progress-percentage {
+    line-height: 32px;
+    color: #101828;
+}
+
+.progress-data {
+    line-height: 20px;
+    color: #756D78;
+}
+
+.mb-12 {
+    margin-bottom: 12px;
+}
+
+.payment-summary {
+    padding: 16px 12px 37px 12px;
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.04);
+    background-color: #fff;
+    border-radius: 12px;
+    height: 451px;
+}
+
+ul {
+    border: 1px solid #E6E4E7;
+    border-radius: 44px;
+    padding: 0;
+    width: 176px;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #756D78;
+}
+
+li.active {
+    color: #1A181B;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+#paymentChart {
+    margin-top: 20px;
+    height: 100%;
+}
+
+.chart-container {
+    height: 350px;
+}
+
+.current-balance {
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.04);
+    padding-top: 24px;
+    padding-left: 8px;
+    padding-right: 26px;
+    padding-bottom: 24px;
+    height: 451px;
+}
+
+.current-balance-header {
+    color: #717579;
+    margin-bottom: 12px;
+}
+
+.circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #FFC125;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-balance-info {
+    color: #BFBFBF;
+    margin-top: 18px;
+    margin-bottom: 64px;
+
+}
+
+.current-balance-info .percentage {
+    color: #FFC125;
+}
+.current-balance-chart-container{
+    height: 180px;
+}
+@media only screen and (max-width: 998px) {
+    .total-order {
+        padding-right: 15px;
+        padding-left: 15px;
+        font-family: Inter;
+    } 
+    .total-order-header {
+        margin-bottom: 20px;
+    }
+    .payment-summary {
+        margin-top: 16px;
+    }
+    .current-balance {
+        margin-top: 16px;
+    }
+}

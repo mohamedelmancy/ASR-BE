@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASR-ERP</title>
+    <link href="../style/main.css" rel="stylesheet">
+    <link id="rtlStylesheet" href="../style/main-rtl.css" rel="stylesheet" disabled>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"></script>
+    <script src="../assets/js/change-language.js" defer></script> <!-- Include JS file -->
+    <script src="../assets/js/load-pages.js" defer></script> <!-- Load html pages inside index.html -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> <!-- Plugin -->
+
+  
+</head>
+<body style="background: #FCFCFC;">
+ 
+
+    <link href="../style/layout/layout.css" rel="stylesheet">
+
+<!-- Sidebar -->
+<div class="d-flex main__layout">
+    <nav id="sidebar" class="sidebar collapse show">
+        <div class="sidebar-header text-center">
+            <img src="../assets/images/h-logo.png" alt="kse-logo" class="kse-logo">
+        </div>
+        <ul class="list-unstyled nav-items">
+            <li>
+                <a href="dashboard.html" class="text-white nav-link d-flex" id="dashboard">
+                    <div class="icon__container">
+                        <object type="image/svg+xml" data="../assets/images/dashboard-icon.svg"></object>
+                    </div>
+                    <label>Main dashboard</label>
+                </a>
+            </li>
+            <!-- New Dropdown -->
+            <li>
+                <a href="#favoriteSubmenu" class="text-white nav-link d-flex dropdown-toggle" data-bs-toggle="collapse">
+                    <div class="icon__container">
+                        <object type="image/svg+xml" data="../assets/images/clarity_favorite-line.svg"></object>
+                    </div>
+                    <label>Favorite</label>
+                </a>
+                <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="favoriteSubmenu">
+                    <li>
+                        <a class="nested-nav-link" href="./favorite/employee.html">
+                            <input type="radio" id="fav1" name="favoriteGroup" class="radio-option">
+                            <label for="fav1" class="">Employee</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nested-nav-link" href="./favorite/add-new-employee.html">
+                            <input type="radio" id="addemp1" name="favoriteGroup" class="radio-option">
+                            <label for="addemp1" class="">Add Employee</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nested-nav-link" data-url="/pages/favorite/taking-receipt.html">
+                            <input type="radio" id="fav2" name="favoriteGroup" class="radio-option">
+                            <label for="fav2" class="">Taking Receipt</label>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- New Dropdown -->
+            <li>
+                <a href="#SystemSubmenu" class="text-white nav-link d-flex dropdown-toggle" data-bs-toggle="collapse">
+                    <div class="icon__container">
+                        <object type="image/svg+xml" data="../assets/images/system.svg"></object>
+                    </div>
+                    <label>System</label>
+                </a>
+                <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="SystemSubmenu">
+                    <li>
+                        <a class="nested-nav-link" data-url="/pages/system/store/system-store.html">
+                            <input type="radio" id="store" name="systemGroup" class="radio-option">
+                            <label for="store" class="">Store</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                            <input type="radio" id="Purchase" name="systemGroup" class="radio-option">
+                            <label for="Purchase" class="">Purchase</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                            <input type="radio" id="Sale" name="systemGroup" class="radio-option">
+                            <label for="Sale" class="">Sale</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                            <input type="radio" id="General Ledger" name="systemGroup" class="radio-option">
+                            <label for="General Ledger" class="">General Ledger</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                            <input type="radio" id="Employee" name="systemGroup" class="radio-option">
+                            <label for="Employee" class="">Employee</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                            <input type="radio" id="Security" name="systemGroup" class="radio-option">
+                            <label for="Security" class="">Security</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                            <input type="radio" id="Definitions" name="systemGroup" class="radio-option">
+                            <label for="Definitions" class="">Definitions</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                            <input type="radio" id="Attachment" name="systemGroup" class="radio-option">
+                            <label for="Attachment" class="">Attachment</label>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- New Dropdown -->
+            <li>
+                <a href="#ReportsSubmenu" class="text-white nav-link d-flex dropdown-toggle" data-bs-toggle="collapse">
+                    <div class="icon__container">
+                        <object type="image/svg+xml" data="../assets/images/reports.svg"></object>
+                    </div>
+                    <label>Reports</label>
+                </a>
+                <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="ReportsSubmenu">
+                    <li>
+                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                            <input type="radio" id="Store Report" name="reportsGroup" class="radio-option">
+                            <label for="Store Report" class="">Store Report</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                            <input type="radio" id="Purchase Report" name="reportsGroup" class="radio-option">
+                            <label for="Purchase Report" class="">Purchase Report</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                            <input type="radio" id="Save Report" name="reportsGroup" class="radio-option">
+                            <label for="Save Report" class="">Save Report</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                            <input type="radio" id="General Lager Report" name="reportsGroup" class="radio-option">
+                            <label for="General Lager Report" class="">General Lager Report</label>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="/pages/login.html" class="text-white nav-link logout d-flex">
+                    <div class="icon__container">
+                        <object type="image/svg+xml" data="../assets/images/logout.svg"></object>
+                    </div>
+                    <label>Logout</label>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="nav_divider w-100">
+            <div></div>
+        </div>
+
+        <div class="langs">
+            <div class="inner">
+                <div class="lang" id="en">English</div>
+                <div class="lang" id="ar">العربيه</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex flex-column main-container col-md">
+        <div class="content__header">
+            <div class="col-sm-3">
+                <img src="../assets/images/hamburgermenu.svg" alt="kse" class="toggleSidebar" id="toggleSidebar">
+            </div>
+            <div class="search">
+                <img src="../assets/images/Search.svg">
+                <input type="text">
+                <img src="../assets/images/Filter.svg">
+            </div>
+            <div class="user_menu d-flex align-items-center">
+
+                <div class="d-flex align-items-start justify-content-center flex-column">
+                    <div class="name">Beter Wageeh</div>
+                    <div class="position">ADMIN</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center dropdown__toggle"
+                     data-bs-toggle="dropdown">
+                    <img src="../assets/images/placeholder.png" alt="asr">
+                    <img src="../assets/images/iconamoon_arrow-down-2-fill.svg" alt="asr">
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="user_menu_dp_item">
+                        <img src="../assets/images/iconamoon_edit-thin.svg">
+                        <span>Edit Profile</span>
+                    </a></li>
+                    <div class="user_menu_divider"></div>
+                    <li><a href="#" class="user_menu_dp_item">
+                        <img src="../assets/images/circum_logout.svg">
+                        <span>Logout</span>
+                    </a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="layout_content d-flex flex-column">
+            <div class="content" id="inner_content">
+
+                <link href="../style/layout/layout.css" rel="stylesheet"/>
+                <link href="../style/dashboard.css" rel="stylesheet"/>
+                <div class="d-flex main__layout store__layout">
+                
+                
+                    <!-- Main Content -->
+                    <div class="main">
+                        <div class="row g-3">
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card card-custom">
+                                            <div class="card-body_">
+                                                <div class="d-flex justify-content-between card-title">
+                                                    <div class="card_title__">
+                                                        <h6>Purchases</h6>
+                                                        <img src="../assets/images/purchases.svg">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between card-subtitle">
+                                                    <p class="title">Total Orders</p>
+                                                    <p class="amount">1,284</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between card-subtitle">
+                                                    <p class="title">Pending</p>
+                                                    <p class="amount" style="color: #f97316">45</p>
+                                                </div>
+                                                <div class="state_card_progress">
+                                                    <div
+                                                            class="progress progress-custom"
+                                                            role="progressbar"
+                                                            aria-label="Basic example"
+                                                            aria-valuenow="30"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                    >
+                                                        <div
+                                                                class="progress-bar progress-color-blue"
+                                                                style="width: 30%"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-card-info">
+                                                    <img class="me-1" src="../assets/images/stock.svg"/>12%
+                                                    increase
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card card-custom">
+                                            <div class="card-body_">
+                                                <div class="d-flex justify-content-between card-title">
+                                                    <div class="card_title__">
+                                                        <h6>Employees</h6>
+                                                        <img src="../assets/images/employee-red.svg">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between card-subtitle">
+                                                    <p class="title">Total Stuff</p>
+                                                    <p class="amount">156</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between card-subtitle">
+                                                    <p class="title">Active Now</p>
+                                                    <p class="amount" style="color: #22c55e">134</p>
+                                                </div>
+                                                <div class="d-flex employee_images">
+                                                    <img src="../assets/images/img.png">
+                                                    <img src="../assets/images/img_2.png" class="emp_img">
+                                                    <img src="../assets/images/img_3.png" class="emp_img">
+                                                    <div class="employee_nums emp_img">+12</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mt-4">
+                                        <div class="card card-custom">
+                                            <div class="card-body_">
+                                                <div class="d-flex justify-content-between card-title">
+                                                    <div class="card_title__">
+                                                        <h6>Sales</h6>
+                                                        <img src="../assets/images/sales.png">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between card-subtitle">
+                                                    <p class="title">Revenue</p>
+                                                    <p class="amount">$84,245</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between card-subtitle">
+                                                    <p class="title">Growth</p>
+                                                    <p class="amount" style="color: #22c55e">+24%</p>
+                                                </div>
+                                                <div class="bar-image">
+                                                    <img src="../assets/images/bars.png" alt="" srcset="" style="height: 64px">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mt-4">
+                                        <div class="card card-custom">
+                                            <div class="card-body_">
+                                                <div class="d-flex justify-content-between card-title">
+                                                    <div class="card_title__">
+                                                        <h6>Presence</h6>
+                                                        <img src="../assets/images/presence.svg">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between card-subtitle">
+                                                    <p class="title">Check-ins Today</p>
+                                                    <p class="amount">134</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between card-subtitle">
+                                                    <p class="title">Late Arrivals</p>
+                                                    <p class="amount" style="color: #ffc125">7</p>
+                                                </div>
+                                                <div class="state_card_progress">
+                                                    <div
+                                                            class="progress progress-custom"
+                                                            role="progressbar"
+                                                            aria-label="Basic example"
+                                                            aria-valuenow="30"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                    >
+                                                        <div
+                                                                class="progress-bar progress-color-orange"
+                                                                style="width: 30%"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-card-info" style="color: #ffc125">
+                                                    <img
+                                                            class="me-1"
+                                                            src="../assets/images/check-orange.svg"
+                                                    />12% increase
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 p-0">
+                                <div class="custom-bar-chart-container">
+                                    <h3 class="pie-chart-header">Total Analysis</h3>
+                                    <div class="pie-chart-container d-flex justify-content-center mx-auto">
+                                        <canvas id="myPieChart"></canvas>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="legend-container d-flex">
+                                            <div
+                                                    class="legend-indicator"
+                                                    style="background-color: #3a6ff8"
+                                            ></div>
+                                            <div class="legend-label ms-2">
+                                                <p class="title mb-1">New Order</p>
+                                                <p class="percentage" style="color: #3a6ff8">65%</p>
+                                            </div>
+                                        </div>
+                                        <div class="legend-container d-flex">
+                                            <div
+                                                    class="legend-indicator"
+                                                    style="background-color: #ffbe17"
+                                            ></div>
+                                            <div class="legend-label ms-2">
+                                                <p class="title mb-1">New Visitor</p>
+                                                <p class="percentage" style="color: #ffbe17">65%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div class="legend-container d-flex">
+                                            <div
+                                                    class="legend-indicator"
+                                                    style="background-color: #3a6ff8"
+                                            ></div>
+                                            <div class="legend-label ms-2">
+                                                <p class="title mb-1">New Order</p>
+                                                <p class="percentage" style="color: #3a6ff8">65%</p>
+                                            </div>
+                                        </div>
+                                        <div class="legend-container d-flex">
+                                            <div
+                                                    class="legend-indicator"
+                                                    style="background-color: #ffbe17"
+                                            ></div>
+                                            <div class="legend-label ms-2">
+                                                <p class="title mb-1">New Visitor</p>
+                                                <p class="percentage" style="color: #ffbe17">65%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div class="legend-container d-flex">
+                                            <div
+                                                    class="legend-indicator"
+                                                    style="background-color: #3a6ff8"
+                                            ></div>
+                                            <div class="legend-label ms-2">
+                                                <p class="title mb-1">New Order</p>
+                                                <p class="percentage" style="color: #3a6ff8">65%</p>
+                                            </div>
+                                        </div>
+                                        <div class="legend-container d-flex">
+                                            <div
+                                                    class="legend-indicator"
+                                                    style="background-color: #ffbe17"
+                                            ></div>
+                                            <div class="legend-label ms-2">
+                                                <p class="title mb-1">New Visitor</p>
+                                                <p class="percentage" style="color: #ffbe17">65%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-8">
+                                <div class="custom-bar-chart-container">
+                                    <div class="card_title__">
+                                        <h3>Revenues and expenses</h3>
+                                        <select class="revenues_and_expenses form-select form-select-lg mb-3"
+                                                aria-label=".form-select-lg example">
+                                            <option selected disabled>Monthly</option>
+                                            <option value="1">Yearly</option>
+                                            <option value="2">Weekly</option>
+                                            <option value="3">Daily</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <canvas id="myBarChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 p-0">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="state__card">
+                                            <div class="d-flex justify-content-between state__card__header">
+                                                <h5 class="state__card__h">Employees Stats</h5>
+                                                <img src="../assets/images/ri_more-2-line.svg"/>
+                                            </div>
+                                            <div class="state__card__info mb-4">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <span class="info-name">Departing</span>
+                                                    <span class="info-persentage">45%</span>
+                                                </div>
+                                                <div class="state_card_progress">
+                                                    <div
+                                                            class="progress progress-custom"
+                                                            role="progressbar"
+                                                            aria-label="Basic example"
+                                                            aria-valuenow="45"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                    >
+                                                        <div
+                                                                class="progress-bar progress-color-blue"
+                                                                style="width: 45%"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="state__card__info mb-4">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <span class="info-name">New</span>
+                                                    <span class="info-persentage">30%</span>
+                                                </div>
+                                                <div class="state_card_progress">
+                                                    <div
+                                                            class="progress progress-custom"
+                                                            role="progressbar"
+                                                            aria-label="Basic example"
+                                                            aria-valuenow="30"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                    >
+                                                        <div
+                                                                class="progress-bar progress-color-green"
+                                                                style="width: 30%"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="state__card__info mb-4">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <span class="info-name">Present</span>
+                                                    <span class="info-persentage">25%</span>
+                                                </div>
+                                                <div class="state_card_progress">
+                                                    <div
+                                                            class="progress progress-custom"
+                                                            role="progressbar"
+                                                            aria-label="Basic example"
+                                                            aria-valuenow="25"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                    >
+                                                        <div
+                                                                class="progress-bar progress-color-orange"
+                                                                style="width: 25%"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="state__card__info">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <span class="info-name">Others</span>
+                                                    <span class="info-persentage">20%</span>
+                                                </div>
+                                                <div class="state_card_progress">
+                                                    <div
+                                                            class="progress progress-custom"
+                                                            role="progressbar"
+                                                            aria-label="Basic example"
+                                                            aria-valuenow="20"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                    >
+                                                        <div
+                                                                class="progress-bar progress-color-red"
+                                                                style="width: 20%"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="state-card-totals">
+                                                <p class="state-card-totals-head mb-1">Total Employees</p>
+                                                <p class="state-card-totals-number">2,547</p>
+                                                <p class="state-card-totals-percentage">
+                                                    <img src="../assets/images/topgreen.svg" class="me-1"/><span
+                                                        class="mt-1"
+                                                >12 % increase from last month</span
+                                                >
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cards Section -->
+                
+                <script src="../assets/js/dashboard.js"></script>
+                
+
+
+
+            </div>
+            <div id="footer" class="footer"></div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/layout/layout.js"></script>
+
+</body>
+</html>

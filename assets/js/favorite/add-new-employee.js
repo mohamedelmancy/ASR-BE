@@ -10,6 +10,7 @@ setTimeout(() => {
     }
 
     function toggleDropdown() {
+        console.log('toggle')
         document.querySelector(".dropdown_history").style.display =
             document.querySelector(".dropdown_history").style.display === "block" ? "none" : "block";
     }
@@ -45,7 +46,7 @@ setTimeout(() => {
     }
 
     document.addEventListener("click", function (e) {
-        if (!document.querySelector(".multi-select").contains(e.target)) {
+        if (!document.querySelector(".history-multi-select").contains(e.target)) {
             document.querySelector(".dropdown_history").style.display = "none";
         }
     });

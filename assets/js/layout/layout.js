@@ -1,7 +1,7 @@
 setTimeout(() => {
-    $("#footer").load("pages/layout/footer.html");
-    const dashboard = document.getElementById("dashboard");
-    dashboard?.click();
+    // $("#footer").load("pages/layout/footer.html");
+    // const dashboard = document.getElementById("dashboard");
+    // dashboard?.click();
     const sidebar = document.getElementById("sidebar");
     const content = document.querySelector(".content");
     const kse_logo = document.querySelector(".kse-logo");
@@ -21,7 +21,6 @@ setTimeout(() => {
     });
 
 
-    console.log('englishBtn*********************', englishBtn)
     // Event Listeners for Language Buttons
     if (englishBtn && arabicBtn) {
         englishBtn.addEventListener("click", () => window.setLanguage("en"));
@@ -39,4 +38,4 @@ setTimeout(() => {
     }
 
 
-}, 1000000)
+}, 1000)

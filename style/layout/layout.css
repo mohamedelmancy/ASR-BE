@@ -504,6 +504,7 @@ nav li.parent::after {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
 /* search btn */
 .btn-search {
     width: 180px;
@@ -521,6 +522,7 @@ nav li.parent::after {
 .btn-search:focus {
     background: #1b3664;
 }
+
 /* table pagination */
 div.dt-container .dt-paging {
     color: #4b5563 !important;
@@ -572,14 +574,17 @@ div.dt-container .dt-paging .dt-paging-button.previous:hover {
 .dataTables_paginate {
     display: flex !important;
     justify-content: center;
-    gap: 10px; 
+    gap: 10px;
 }
+
 .dt-paging nav {
     display: flex !important;
 }
-.dt-scroll-foot{
+
+.dt-scroll-foot {
     display: none;
 }
+
 div.dt-container .dt-paging .dt-paging-button,
 div.dt-container .dt-paging .dt-paging-button:hover {
     border-radius: 4px;

@@ -30,7 +30,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> <!-- Plugin -->
 
-    
+
 </head>
 <body style="background: #FCFCFC;">
 <div id="content" dir="ltr">
@@ -38,330 +38,337 @@
 
     <link href="../../style/layout/layout.css" rel="stylesheet">
 
-<!-- Sidebar -->
-<div class="d-flex main__layout">
-    <nav id="sidebar" class="sidebar collapse show">
-        <div class="sidebar-header text-center">
-            <img src="../../assets/images/h-logo.png" alt="kse-logo" class="kse-logo">
-        </div>
-        <ul class="list-unstyled nav-items">
-            <li>
-                <a href="../dashboard.html" class="text-white nav-link d-flex" id="dashboard">
-                    <div class="icon__container">
-                        <object type="image/svg+xml" data="../../assets/images/dashboard-icon.svg"></object>
-                    </div>
-                    <label>Main dashboard</label>
-                </a>
-            </li>
-            <!-- New Dropdown -->
-            <li>
-                <a href="#favoriteSubmenu" class="text-white nav-link d-flex dropdown-toggle" data-bs-toggle="collapse">
-                    <div class="icon__container">
-                        <object type="image/svg+xml" data="../../assets/images/clarity_favorite-line.svg"></object>
-                    </div>
-                    <label>Favorite</label>
-                </a>
-                <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="favoriteSubmenu">
-                    <li>
-                        <a class="nested-nav-link" href="./employee.html">
-                            <input type="radio" id="fav1" name="favoriteGroup" class="radio-option">
-                            <label for="fav1" class="">Employee</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nested-nav-link" href="./add-new-employee.html">
-                            <input type="radio" id="addemp1" name="favoriteGroup" class="radio-option">
-                            <label for="addemp1" class="">Add Employee</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nested-nav-link" data-url="/pages/favorite/taking-receipt.html">
-                            <input type="radio" id="fav2" name="favoriteGroup" class="radio-option">
-                            <label for="fav2" class="">Taking Receipt</label>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
-            <!-- New Dropdown -->
-            <li>
-                <a href="#SystemSubmenu" class="text-white nav-link d-flex dropdown-toggle" data-bs-toggle="collapse">
-                    <div class="icon__container">
-                        <object type="image/svg+xml" data="../../assets/images/system.svg"></object>
-                    </div>
-                    <label>System</label>
-                </a>
-                <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="SystemSubmenu">
-                    <li>
-                        <a class="nested-nav-link" data-url="/pages/system/store/system-store.html">
-                            <input type="radio" id="store" name="systemGroup" class="radio-option">
-                            <label for="store" class="">Store</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
-                            <input type="radio" id="Purchase" name="systemGroup" class="radio-option">
-                            <label for="Purchase" class="">Purchase</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
-                            <input type="radio" id="Sale" name="systemGroup" class="radio-option">
-                            <label for="Sale" class="">Sale</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
-                            <input type="radio" id="General Ledger" name="systemGroup" class="radio-option">
-                            <label for="General Ledger" class="">General Ledger</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
-                            <input type="radio" id="Employee" name="systemGroup" class="radio-option">
-                            <label for="Employee" class="">Employee</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
-                            <input type="radio" id="Security" name="systemGroup" class="radio-option">
-                            <label for="Security" class="">Security</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
-                            <input type="radio" id="Definitions" name="systemGroup" class="radio-option">
-                            <label for="Definitions" class="">Definitions</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
-                            <input type="radio" id="Attachment" name="systemGroup" class="radio-option">
-                            <label for="Attachment" class="">Attachment</label>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
-            <!-- New Dropdown -->
-            <li>
-                <a href="#ReportsSubmenu" class="text-white nav-link d-flex dropdown-toggle" data-bs-toggle="collapse">
-                    <div class="icon__container">
-                        <object type="image/svg+xml" data="../../assets/images/reports.svg"></object>
-                    </div>
-                    <label>Reports</label>
-                </a>
-                <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="ReportsSubmenu">
-                    <li>
-                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
-                            <input type="radio" id="Store Report" name="reportsGroup" class="radio-option">
-                            <label for="Store Report" class="">Store Report</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
-                            <input type="radio" id="Purchase Report" name="reportsGroup" class="radio-option">
-                            <label for="Purchase Report" class="">Purchase Report</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
-                            <input type="radio" id="Save Report" name="reportsGroup" class="radio-option">
-                            <label for="Save Report" class="">Save Report</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
-                            <input type="radio" id="General Lager Report" name="reportsGroup" class="radio-option">
-                            <label for="General Lager Report" class="">General Lager Report</label>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
-
-            <li>
-                <a href="/pages/login.html" class="text-white nav-link logout d-flex">
-                    <div class="icon__container">
-                        <object type="image/svg+xml" data="../../assets/images/logout.svg"></object>
-                    </div>
-                    <label>Logout</label>
-                </a>
-            </li>
-
-        </ul>
-
-        <div class="nav_divider w-100">
-            <div></div>
-        </div>
-
-        <div class="langs">
-            <div class="inner">
-                <div class="lang" id="en">English</div>
-                <div class="lang" id="ar">العربيه</div>
+    <!-- Sidebar -->
+    <div class="d-flex main__layout">
+        <nav id="sidebar" class="sidebar collapse show">
+            <div class="sidebar-header text-center">
+                <img src="../../assets/images/h-logo.png" alt="kse-logo" class="kse-logo">
             </div>
-        </div>
-    </nav>
+            <ul class="list-unstyled nav-items">
+                <li>
+                    <a href="../dashboard.html" class="text-white nav-link d-flex" id="dashboard">
+                        <div class="icon__container">
+                            <object type="image/svg+xml" data="../../assets/images/dashboard-icon.svg"></object>
+                        </div>
+                        <label>Main dashboard</label>
+                    </a>
+                </li>
+                <!-- New Dropdown -->
+                <li>
+                    <a href="#favoriteSubmenu" class="text-white nav-link d-flex dropdown-toggle"
+                       data-bs-toggle="collapse">
+                        <div class="icon__container">
+                            <object type="image/svg+xml" data="../../assets/images/clarity_favorite-line.svg"></object>
+                        </div>
+                        <label>Favorite</label>
+                    </a>
+                    <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="favoriteSubmenu">
+                        <li>
+                            <a class="nested-nav-link" href="./employee.html">
+                                <input type="radio" id="fav1" name="favoriteGroup" class="radio-option">
+                                <label for="fav1" class="">Employee</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nested-nav-link" href="./add-new-employee.html">
+                                <input type="radio" id="addemp1" name="favoriteGroup" class="radio-option">
+                                <label for="addemp1" class="">Add Employee</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nested-nav-link" href="/pages/favorite/taking-receipt.html">
+                                <input type="radio" id="fav2" name="favoriteGroup" class="radio-option">
+                                <label for="fav2" class="">Taking Receipt</label>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
-    <div class="d-flex flex-column main-container col-md">
-        <div class="content__header">
-            <div class="col-sm-3">
-                <img src="../../assets/images/hamburgermenu.svg" alt="kse" class="toggleSidebar" id="toggleSidebar">
+                <!-- New Dropdown -->
+                <li>
+                    <a href="#SystemSubmenu" class="text-white nav-link d-flex dropdown-toggle"
+                       data-bs-toggle="collapse">
+                        <div class="icon__container">
+                            <object type="image/svg+xml" data="../../assets/images/system.svg"></object>
+                        </div>
+                        <label>System</label>
+                    </a>
+                    <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="SystemSubmenu">
+                        <li>
+                            <a class="nested-nav-link" href="/pages/system/store/system-store.html">
+                                <input type="radio" id="store" name="systemGroup" class="radio-option">
+                                <label for="store" class="">Store</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nested-nav-link" href="">
+                                <input type="radio" id="Purchase" name="systemGroup" class="radio-option">
+                                <label for="Purchase" class="">Purchase</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nested-nav-link" href="">
+                                <input type="radio" id="Sale" name="systemGroup" class="radio-option">
+                                <label for="Sale" class="">Sale</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nested-nav-link" href="">
+                                <input type="radio" id="General Ledger" name="systemGroup" class="radio-option">
+                                <label for="General Ledger" class="">General Ledger</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nested-nav-link" href="">
+                                <input type="radio" id="Employee" name="systemGroup" class="radio-option">
+                                <label for="Employee" class="">Employee</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nested-nav-link" href="">
+                                <input type="radio" id="Security" name="systemGroup" class="radio-option">
+                                <label for="Security" class="">Security</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nested-nav-link" href="">
+                                <input type="radio" id="Definitions" name="systemGroup" class="radio-option">
+                                <label for="Definitions" class="">Definitions</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nested-nav-link" href="">
+                                <input type="radio" id="Attachment" name="systemGroup" class="radio-option">
+                                <label for="Attachment" class="">Attachment</label>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- New Dropdown -->
+                <li>
+                    <a href="#ReportsSubmenu" class="text-white nav-link d-flex dropdown-toggle"
+                       data-bs-toggle="collapse">
+                        <div class="icon__container">
+                            <object type="image/svg+xml" data="../../assets/images/reports.svg"></object>
+                        </div>
+                        <label>Reports</label>
+                    </a>
+                    <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="ReportsSubmenu">
+                        <li>
+                            <a class="nested-nav-link" href="">
+                                <input type="radio" id="Store Report" name="reportsGroup" class="radio-option">
+                                <label for="Store Report" class="">Store Report</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nested-nav-link" href="">
+                                <input type="radio" id="Purchase Report" name="reportsGroup" class="radio-option">
+                                <label for="Purchase Report" class="">Purchase Report</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nested-nav-link" href="">
+                                <input type="radio" id="Save Report" name="reportsGroup" class="radio-option">
+                                <label for="Save Report" class="">Save Report</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nested-nav-link" href="">
+                                <input type="radio" id="General Lager Report" name="reportsGroup" class="radio-option">
+                                <label for="General Lager Report" class="">General Lager Report</label>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="/pages/login.html" class="text-white nav-link logout d-flex">
+                        <div class="icon__container">
+                            <object type="image/svg+xml" data="../../assets/images/logout.svg"></object>
+                        </div>
+                        <label>Logout</label>
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="nav_divider w-100">
+                <div></div>
             </div>
-            <div class="search">
-                <img src="../../assets/images/Search.svg">
-                <input type="text">
-                <img src="../../assets/images/Filter.svg">
-            </div>
-            <div class="user_menu d-flex align-items-center">
 
-                <div class="d-flex align-items-start justify-content-center flex-column">
-                    <div class="name">Beter Wageeh</div>
-                    <div class="position">ADMIN</div>
-                </div>
-                <div class="d-flex align-items-center justify-content-center dropdown__toggle"
-                     data-bs-toggle="dropdown">
-                    <img src="../../assets/images/placeholder.png" alt="asr">
-                    <img src="../../assets/images/iconamoon_arrow-down-2-fill.svg" alt="asr">
-                </div>
-                <ul class="dropdown-menu">
-                    <li><a href="#" class="user_menu_dp_item">
-                        <img src="../../assets/images/iconamoon_edit-thin.svg">
-                        <span>Edit Profile</span>
-                    </a></li>
-                    <div class="user_menu_divider"></div>
-                    <li><a href="#" class="user_menu_dp_item">
-                        <img src="../../assets/images/circum_logout.svg">
-                        <span>Logout</span>
-                    </a></li>
-                </ul>
-
-            </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="layout_content d-flex flex-column">
-            <div class="content" id="inner_content">
-
-                <link href="../../style/favorite/employee.css" rel="stylesheet">
-<script src="../../assets/js/favorite/employee.js" defer></script>
-<div class="container-fluid animate__animated animate__fadeIn">
-    <div class="row">
-        <div class="page_title d-flex p-0">
-            Employee Page
-        </div>
-
-        <div class="col-sm-12 justify-content-between align-items-center header__ p-0 d-flex">
-            <div class="search__ col-sm-8 justify-content-between">
-                <input placeholder="Search employees by name, role, department...">
-                <div class="filter__ d-flex">
-                    <img src="../../assets/images/filter.png">
-                    <span class="text__">Filters</span>
+            <div class="langs">
+                <div class="inner">
+                    <div class="lang" id="en">English</div>
+                    <div class="lang" id="ar">العربيه</div>
                 </div>
             </div>
-            <a class="add__employee" href="/pages/favorite/add-new-employee.html">
-                <img src="../../assets/images/add.png">
-                <span>Add Employee</span>
-            </a>
-        </div>
+        </nav>
 
-        <div class="align-items-center col-sm-12 d-flex filters__ justify-content-start">
-            <div>Quick Filters:</div>
-            <div class="filter__item" id="all_employee">
-                <object type="image/svg+xml" data="../../assets/images/all_employee.svg" width="100" height="100"></object>
-                <div class="text___">All Employees</div>
+        <div class="d-flex flex-column main-container col-md">
+            <div class="content__header">
+                <div class="col-sm-3">
+                    <img src="../../assets/images/hamburgermenu.svg" alt="kse" class="toggleSidebar" id="toggleSidebar">
+                </div>
+                <div class="search">
+                    <img src="../../assets/images/Search.svg">
+                    <input type="text">
+                    <img src="../../assets/images/Filter.svg">
+                </div>
+                <div class="user_menu d-flex align-items-center">
+
+                    <div class="d-flex align-items-start justify-content-center flex-column">
+                        <div class="name">Beter Wageeh</div>
+                        <div class="position">ADMIN</div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center dropdown__toggle"
+                         data-bs-toggle="dropdown">
+                        <img src="../../assets/images/placeholder.png" alt="asr">
+                        <img src="../../assets/images/iconamoon_arrow-down-2-fill.svg" alt="asr">
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="user_menu_dp_item">
+                            <img src="../../assets/images/iconamoon_edit-thin.svg">
+                            <span>Edit Profile</span>
+                        </a></li>
+                        <div class="user_menu_divider"></div>
+                        <li><a href="#" class="user_menu_dp_item">
+                            <img src="../../assets/images/circum_logout.svg">
+                            <span>Logout</span>
+                        </a></li>
+                    </ul>
+
+                </div>
             </div>
-            <div class="filter__item" id="engineering">
-                <object type="image/svg+xml" data="../../assets/images/engineering.svg" width="100" height="100"></object>
-                <div class="text___">Engineering</div>
-            </div>
-            <div class="filter__item" id="design">
-                <object type="image/svg+xml" data="../../assets/images/design.svg" width="100" height="100"></object>
-                <div class="text___">Design</div>
-            </div>
-            <div class="filter__item" id="marketing">
-                <object type="image/svg+xml" data="../../assets/images/marketing.svg" width="100" height="100"></object>
-                <div class="text___">Marketing</div>
-            </div>
-        </div>
-        <table id="myTable" class="display nowrap" style="width: 100%">
-            <thead>
-            <tr>
-                <th>Employee</th>
-                <th>Address</th>
-                <th>Phone number</th>
-                <th>Email</th>
-                <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class="employee__">
-                    <img src="../../assets/images/img.png">
-                    <span class="text__">John Smith</span>
-                </td>
-                <td>123 Main St, New York, NY 10001</td>
-                <td>(555) 123-4567</td>
-                <td>john.smith@email.com</td>
-                <td class="actions__">
-                    <img src="../../assets/images/eye.svg">
-                    <img src="../../assets/images/edit_action.svg">
-                    <img src="../../assets/images/delete_action.svg">
-                </td>
-            </tr>
-            <tr>
-                <td class="employee__">
-                    <img src="../../assets/images/img_2.png">
-                    <span class="text__">Sarah Johnson</span>
-                </td>
-                <td>456 Oak Ave, Los Angeles, CA 90001</td>
-                <td>(555) 987-6543</td>
-                <td>sarah.j@email.com</td>
-                <td class="actions__">
-                    <img src="../../assets/images/eye.svg">
-                    <img src="../../assets/images/edit_action.svg">
-                    <img src="../../assets/images/delete_action.svg">
-                </td>
-            </tr>
-            <tr>
-                <td class="employee__">
-                    <img src="../../assets/images/img_3.png">
-                    <span class="text__">Michael Brown</span>
-                </td>
-                <td>789 Pine St, Chicago, IL 60601</td>
-                <td>(555) 246-8135</td>
-                <td>m.brown@email.com</td>
-                <td class="actions__">
-                    <img src="../../assets/images/eye.svg">
-                    <img src="../../assets/images/edit_action.svg">
-                    <img src="../../assets/images/delete_action.svg">
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <!-- Pagination Buttons -->
-        <div class="pagination">
-            <div class="info__">
-                <span>Showing <span>1</span> to <span>3</span> of <span>50</span> entries</span>
-            </div>
-            <div class="buttons">
-                <button class="prev-btn" disabled>Previous</button>
-                <span class="page-number active">1</span>
-                <span class="page-number">2</span>
-                <span class="page-number">3</span>
-                <button class="next-btn">Next</button>
+
+            <!-- Main Content -->
+            <div class="layout_content d-flex flex-column">
+                <div class="content" id="inner_content">
+
+                    <link href="../../style/favorite/employee.css" rel="stylesheet">
+                    <script src="../../assets/js/favorite/employee.js" defer></script>
+                    <div class="container-fluid animate__animated animate__fadeIn">
+                        <div class="row">
+                            <div class="page_title d-flex p-0">
+                                Employee Page
+                            </div>
+
+                            <div class="col-sm-12 justify-content-between align-items-center header__ p-0 d-flex">
+                                <div class="search__ col-sm-8 justify-content-between">
+                                    <input placeholder="Search employees by name, role, department...">
+                                    <div class="filter__ d-flex">
+                                        <img src="../../assets/images/filter.png">
+                                        <span class="text__">Filters</span>
+                                    </div>
+                                </div>
+                                <a class="add__employee" href="/pages/favorite/add-new-employee.html">
+                                    <img src="../../assets/images/add.png">
+                                    <span>Add Employee</span>
+                                </a>
+                            </div>
+
+                            <div class="align-items-center col-sm-12 d-flex filters__ justify-content-start">
+                                <div>Quick Filters:</div>
+                                <div class="filter__item" id="all_employee">
+                                    <object type="image/svg+xml" data="../../assets/images/all_employee.svg" width="100"
+                                            height="100"></object>
+                                    <div class="text___">All Employees</div>
+                                </div>
+                                <div class="filter__item" id="engineering">
+                                    <object type="image/svg+xml" data="../../assets/images/engineering.svg" width="100"
+                                            height="100"></object>
+                                    <div class="text___">Engineering</div>
+                                </div>
+                                <div class="filter__item" id="design">
+                                    <object type="image/svg+xml" data="../../assets/images/design.svg" width="100"
+                                            height="100"></object>
+                                    <div class="text___">Design</div>
+                                </div>
+                                <div class="filter__item" id="marketing">
+                                    <object type="image/svg+xml" data="../../assets/images/marketing.svg" width="100"
+                                            height="100"></object>
+                                    <div class="text___">Marketing</div>
+                                </div>
+                            </div>
+                            <table id="myTable" class="display nowrap" style="width: 100%">
+                                <thead>
+                                <tr>
+                                    <th>Employee</th>
+                                    <th>Address</th>
+                                    <th>Phone number</th>
+                                    <th>Email</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="employee__">
+                                        <img src="../../assets/images/img.png">
+                                        <span class="text__">John Smith</span>
+                                    </td>
+                                    <td>123 Main St, New York, NY 10001</td>
+                                    <td>(555) 123-4567</td>
+                                    <td>john.smith@email.com</td>
+                                    <td class="actions__">
+                                        <img src="../../assets/images/eye.svg">
+                                        <img src="../../assets/images/edit_action.svg">
+                                        <img src="../../assets/images/delete_action.svg">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="employee__">
+                                        <img src="../../assets/images/img_2.png">
+                                        <span class="text__">Sarah Johnson</span>
+                                    </td>
+                                    <td>456 Oak Ave, Los Angeles, CA 90001</td>
+                                    <td>(555) 987-6543</td>
+                                    <td>sarah.j@email.com</td>
+                                    <td class="actions__">
+                                        <img src="../../assets/images/eye.svg">
+                                        <img src="../../assets/images/edit_action.svg">
+                                        <img src="../../assets/images/delete_action.svg">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="employee__">
+                                        <img src="../../assets/images/img_3.png">
+                                        <span class="text__">Michael Brown</span>
+                                    </td>
+                                    <td>789 Pine St, Chicago, IL 60601</td>
+                                    <td>(555) 246-8135</td>
+                                    <td>m.brown@email.com</td>
+                                    <td class="actions__">
+                                        <img src="../../assets/images/eye.svg">
+                                        <img src="../../assets/images/edit_action.svg">
+                                        <img src="../../assets/images/delete_action.svg">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!-- Pagination Buttons -->
+                            <div class="pagination">
+                                <div class="info__">
+                                    <span>Showing <span>1</span> to <span>3</span> of <span>50</span> entries</span>
+                                </div>
+                                <div class="buttons">
+                                    <button class="prev-btn" disabled>Previous</button>
+                                    <span class="page-number active">1</span>
+                                    <span class="page-number">2</span>
+                                    <span class="page-number">3</span>
+                                    <button class="next-btn">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="footer" class="footer"></div>
             </div>
         </div>
     </div>
-</div>
 
-            </div>
-            <div id="footer" class="footer"></div>
-        </div>
-    </div>
-</div>
-
-<script src="../../assets/js/layout/layout.js"></script>
+    <script src="../../assets/js/layout/layout.js"></script>
 
 </div>
 </body>

@@ -31,7 +31,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> <!-- Plugin -->
     <link href="../../style/layout/layout.css" rel="stylesheet">
 
-     
+
 </head>
 <body style="background: #FCFCFC;">
     <div id="content" dir="ltr">
@@ -74,7 +74,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="nested-nav-link" data-url="/pages/favorite/taking-receipt.html">
+                                <a class="nested-nav-link" href="/pages/favorite/taking-receipt.html">
                                     <input type="radio" id="fav2" name="favoriteGroup" class="radio-option">
                                     <label for="fav2" class="">Taking Receipt</label>
                                 </a>
@@ -92,49 +92,49 @@
                         </a>
                         <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="SystemSubmenu">
                             <li>
-                                <a class="nested-nav-link" data-url="/pages/system/store/system-store.html">
+                                <a class="nested-nav-link" href="/pages/system/store/system-store.html">
                                     <input type="radio" id="store" name="systemGroup" class="radio-option">
                                     <label for="store" class="">Store</label>
                                 </a>
                             </li>
                             <li>
-                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                <a class="nested-nav-link" href="">
                                     <input type="radio" id="Purchase" name="systemGroup" class="radio-option">
                                     <label for="Purchase" class="">Purchase</label>
                                 </a>
                             </li>
                             <li>
-                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                <a class="nested-nav-link" href="">
                                     <input type="radio" id="Sale" name="systemGroup" class="radio-option">
                                     <label for="Sale" class="">Sale</label>
                                 </a>
                             </li>
                             <li>
-                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                <a class="nested-nav-link" href="">
                                     <input type="radio" id="General Ledger" name="systemGroup" class="radio-option">
                                     <label for="General Ledger" class="">General Ledger</label>
                                 </a>
                             </li>
                             <li>
-                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                <a class="nested-nav-link" href="">
                                     <input type="radio" id="Employee" name="systemGroup" class="radio-option">
                                     <label for="Employee" class="">Employee</label>
                                 </a>
                             </li>
                             <li>
-                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                <a class="nested-nav-link" href="">
                                     <input type="radio" id="Security" name="systemGroup" class="radio-option">
                                     <label for="Security" class="">Security</label>
                                 </a>
                             </li>
                             <li>
-                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                <a class="nested-nav-link" href="">
                                     <input type="radio" id="Definitions" name="systemGroup" class="radio-option">
                                     <label for="Definitions" class="">Definitions</label>
                                 </a>
                             </li>
                             <li>
-                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                <a class="nested-nav-link" href="">
                                     <input type="radio" id="Attachment" name="systemGroup" class="radio-option">
                                     <label for="Attachment" class="">Attachment</label>
                                 </a>
@@ -152,25 +152,25 @@
                         </a>
                         <ul class="collapse list-unstyled animate__animated animate__fadeIn p-0" id="ReportsSubmenu">
                             <li>
-                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                <a class="nested-nav-link" href="">
                                     <input type="radio" id="Store Report" name="reportsGroup" class="radio-option">
                                     <label for="Store Report" class="">Store Report</label>
                                 </a>
                             </li>
                             <li>
-                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                <a class="nested-nav-link" href="">
                                     <input type="radio" id="Purchase Report" name="reportsGroup" class="radio-option">
                                     <label for="Purchase Report" class="">Purchase Report</label>
                                 </a>
                             </li>
                             <li>
-                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                <a class="nested-nav-link" href="">
                                     <input type="radio" id="Save Report" name="reportsGroup" class="radio-option">
                                     <label for="Save Report" class="">Save Report</label>
                                 </a>
                             </li>
                             <li>
-                                <a class="nested-nav-link" data-url="/pages/favorite/employee.html">
+                                <a class="nested-nav-link" href="">
                                     <input type="radio" id="General Lager Report" name="reportsGroup" class="radio-option">
                                     <label for="General Lager Report" class="">General Lager Report</label>
                                 </a>
@@ -371,7 +371,7 @@
                                     </div>
 
                                     <div class="col-sm-12 d-flex row">
-                                        <div class="multi-select input-field col-sm-12 col-md">
+                                        <div class="history-multi-select input-field col-sm-12 col-md">
                                             <label class="label">Job History</label>
                                             <div class="selected-items input-multi-select" onclick="toggleDropdown()">
                                                 <img src="../../assets/images/arrow_down_radius.svg" class="arrow_down_radius">
@@ -445,63 +445,9 @@
             </div>
         </div>
 
-
-
-
         <script src="../../assets/js/layout/layout.js"></script>
 
         <script src="../../assets/js/favorite/add-new-employee.js"></script>
-
-
-
-        <script>
-
-            function submit(form, event) {
-                event.preventDefault();
-                console.log('form', form)
-            }
-
-            function toggleDropdown() {
-                document.querySelector(".dropdown").style.display =
-                    document.querySelector(".dropdown").style.display === "block" ? "none" : "block";
-            }
-
-            document.querySelectorAll(".dropdown input").forEach(input => {
-                input.addEventListener("change", function () {
-                    let selectedDiv = document.querySelector(".selected-items");
-                    let existingTags = document.querySelectorAll(".tag");
-
-                    if (this.checked) {
-                        let tag = document.createElement("div");
-                        tag.className = "tag";
-                        tag.innerHTML = `${this.value} <img src="../../assets/images/iconoir_cancel.svg" onclick="removeTag(this, '${this.value}')"></img>`;
-                        selectedDiv.appendChild(tag);
-                    } else {
-                        existingTags.forEach(tag => {
-                            if (tag.textContent.includes(this.value)) {
-                                tag.remove();
-                            }
-                        });
-                    }
-                });
-            });
-
-            function removeTag(element, value) {
-                element.parentElement.remove();
-                document.querySelectorAll(".dropdown input").forEach(input => {
-                    if (input.value === value) {
-                        input.checked = false;
-                    }
-                });
-            }
-
-            document.addEventListener("click", function (e) {
-                if (!document.querySelector(".multi-select").contains(e.target)) {
-                    document.querySelector(".dropdown").style.display = "none";
-                }
-            });
-        </script>
-
 
     </div>
 </body>

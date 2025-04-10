@@ -295,4 +295,44 @@ setTimeout(() => {
         wrapper.appendChild(dropdown);
         originalSelect.parentNode.insertBefore(wrapper, originalSelect);
     });
+
+
+
+    //////// radio buttons logic///////////////
+    const radioGroup = document.getElementById("myRadioGroup");
+    const options = radioGroup.querySelectorAll(".radio-option__");
+
+    options.forEach(option => {
+        const input = option.querySelector("input[type='radio']");
+        input.addEventListener("change", () => {
+            options.forEach(o => o.classList.remove("selected"));
+            if (input.checked) {
+                option.classList.add("selected");
+            }
+            console.log("Selected:", input.value);
+        });
+    });
+    //////// check boxes buttons logic///////////////
+
+
+    const checkboxGroup = document.getElementById("myCheckboxGroup");
+    const options__ = checkboxGroup.querySelectorAll(".checkbox-option");
+
+    options__.forEach(option => {
+        const input = option.querySelector("input[type='checkbox']");
+        input.addEventListener("change", () => {
+            if (input.checked) {
+                option.classList.add("checked");
+            } else {
+                option.classList.remove("checked");
+            }
+
+            // Logging selected values
+            const checkedValues = Array.from(
+                checkboxGroup.querySelectorAll("input[type='checkbox']:checked")
+            ).map(checkbox => checkbox.value);
+
+            console.log("Checked values:", checkedValues);
+        });
+    });
 }, 1000);

@@ -395,6 +395,103 @@
                                 </div>
                                 <div class="col-sm-12 col-md row">
                                     <div class="input-field col-sm-12">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox"/>
+                                            <span class="checkmark"></span>
+                                            Remember me
+                                        </label>
+                                    </div>
+
+                                    <div class="custom-radio-group">
+                                        <label class="custom-radio">
+                                            <input type="radio" name="payment" value="upcoming" checked/>
+                                            <span class="radio-mark"></span>
+                                            Upcoming
+                                        </label>
+
+                                        <label class="custom-radio">
+                                            <input type="radio" name="payment" value="paid"/>
+                                            <span class="radio-mark"></span>
+                                            Paid
+                                        </label>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-sm-12 col-md row">
+                                    <div class="input-field col-sm-12">
+                                        <div class="dropdown-tree">
+                                            <div class="dropdown-toggle" onclick="toggleDropdownTree()">Select Item ▼
+                                            </div>
+
+                                            <div class="tree-dropdown hidden" id="treeDropdown">
+                                                <input type="text" placeholder="Search..." class="search-input"
+                                                       oninput="filterTree(this.value)"/>
+
+                                                <ul class="tree-list">
+                                                    <li>
+                                                        <span class="caret" onclick="toggleNode(this)">Fruits</span>
+                                                        <ul class="nested">
+                                                            <li onclick="selectItem(this)">Apple</li>
+                                                            <li onclick="selectItem(this)">Banana</li>
+                                                            <li>
+                                                                <span class="caret"
+                                                                      onclick="toggleNode(this)">Citrus</span>
+                                                                <ul class="nested">
+                                                                    <li onclick="selectItem(this)">Orange</li>
+                                                                    <li>
+                                                                        <span class="caret" onclick="toggleNode(this)">Lemon</span>
+                                                                        <ul class="nested">
+                                                                            <li onclick="selectItem(this)">L1</li>
+                                                                            <li onclick="selectItem(this)">L2</li>
+                                                                            <li>
+                                                                                <span class="caret"
+                                                                                      onclick="toggleNode(this)">L3</span>
+                                                                                <ul class="nested">
+                                                                                    <li onclick="selectItem(this)">
+                                                                                        L3-1
+                                                                                    </li>
+                                                                                    <li onclick="selectItem(this)">
+                                                                                        L3-2
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <span class="caret" onclick="toggleNode(this)">Vegetables</span>
+                                                        <ul class="nested">
+                                                            <li onclick="selectItem(this)">Carrot</li>
+                                                            <li onclick="selectItem(this)">Broccoli</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-field col-sm-12">
+                                        <label for="items">Select Item:</label>
+                                        <select id="items" name="items">
+                                            <option value="">-- Select --</option>
+                                            <option value="apple">Apple</option>
+                                            <option value="banana">Banana</option>
+                                            <option value="orange">Orange</option>
+                                            <option value="lemon">Lemon</option>
+                                            <option value="carrot">Carrot</option>
+                                            <option value="broccoli">Broccoli</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-12 col-md row">
+                                    <div class="input-field col-sm-12">
                                         <label class="label">Address </label>
                                         <textarea class="input-text-area" name="address"></textarea>
                                     </div>

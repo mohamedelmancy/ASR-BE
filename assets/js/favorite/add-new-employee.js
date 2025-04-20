@@ -3,6 +3,10 @@ setTimeout(() => {
     window.toggleDropdown = toggleDropdown;
     window.submit = submit;
     window.removeTag = removeTag;
+    window.toggleDropdownTree = toggleDropdownTree;
+    window.toggleNode = toggleNode;
+    window.selectItem = selectItem;
+    window.filterTree = filterTree;
 
     function submit(form, event) {
         event.preventDefault();
@@ -297,7 +301,6 @@ setTimeout(() => {
     });
 
 
-
     //////// radio buttons logic///////////////
     const radioGroup = document.getElementById("myRadioGroup");
     const options = radioGroup.querySelectorAll(".radio-option__");
@@ -335,4 +338,37 @@ setTimeout(() => {
             console.log("Checked values:", checkedValues);
         });
     });
+
+
+    //////// dropdown tree logic///////////////
+
+    function toggleDropdownTree() {
+        document.getElementById("treeDropdown").classList.toggle("hidden");
+    }
+
+    function toggleNode(element) {
+        element.classList.toggle("caret-down");
+        const nested = element.nextElementSibling;
+        if (nested) nested.classList.toggle("nested");
+    }
+
+    function selectItem(item) {
+        document.querySelector(".dropdown-toggle").textContent = item.textContent;
+        document.getElementById("treeDropdown").classList.add("hidden");
+    }
+
+    function filterTree(searchTerm) {
+        const listItems = document.querySelectorAll("#treeDropdown li");
+
+        listItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            const match = text.includes(searchTerm.toLowerCase());
+            item.style.display = match ? "" : "none";
+
+            if (item.querySelector("ul")) {
+                item.querySelector("ul").classList.remove("nested");
+            }
+        });
+    }
+
 }, 1000);

@@ -370,5 +370,29 @@ setTimeout(() => {
             }
         });
     }
+    //////// nested dropdown logic///////////////
 
+
+    document.querySelectorAll('.nested-option').forEach(item => {
+        item.addEventListener('click', function (e) {
+            e.stopPropagation(); // Prevents closing the dropdown when clicking nested
+            const btn = document.getElementById('nestedSelectBtn');
+            btn.textContent = this.textContent;
+
+            // Optionally: Close the dropdown after selection
+            document.getElementById('nestedSelectMenu').style.display = 'none';
+        });
+    });
+
+    // Toggle menu manually on button click (for better control)
+    document.getElementById('nestedSelectBtn').addEventListener('click', function (e) {
+        e.stopPropagation();
+        const menu = document.getElementById('nestedSelectMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Close the dropdown if clicked outside
+    document.addEventListener('click', function () {
+        document.getElementById('nestedSelectMenu').style.display = 'none';
+    });
 }, 1000);
